@@ -1,9 +1,10 @@
-.key {
-  width: 40px;
-}
 .key,
-.keybig {
+.keybig,
+.key_gray,
+.key_green,
+.key_yellow {
   height: 50px;
+  width: 40px;
   background-color: gray;
   color: #f5f5f5;
   border-radius: 5px;
@@ -18,16 +19,31 @@
   margin: 2px;
   transition: all 0.2s ease-out;
 }
+.key_gray {
+  background-color: rgb(68, 68, 68) !important;
+}
+.key_yellow {
+  background-color: rgb(135, 150, 0) !important;
+}
+.key_green {
+  background-color: rgb(11, 136, 0) !important;
+}
 .keybig {
   width: 60px;
 }
 .key:hover,
-.keybig:hover {
+.keybig:hover,
+.key_gray,
+.key_green,
+.key_yellow {
   background-color: #5f5f5f;
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  .key {
+  .key,
+  .key_gray,
+  .key_green,
+  .key_yellow {
     height: 55px;
     width: 35px;
     font-size: 1.1rem;
@@ -39,7 +55,10 @@
   }
 }
 @media (min-width: 1000px) {
-  .key {
+  .key,
+  .key_gray,
+  .key_green,
+  .key_yellow {
     height: 45px;
     width: 45px;
     font-size: 1.1rem;
@@ -51,7 +70,10 @@
   }
 }
 @media (max-width: 400px) {
-  .key {
+  .key,
+  .key_gray,
+  .key_green,
+  .key_yellow {
     height: 55px;
     width: 30px;
     font-size: 1rem;
@@ -63,7 +85,10 @@
   }
 }
 @media (max-width: 350px) {
-  .key {
+  .key,
+  .key_gray,
+  .key_green,
+  .key_yellow {
     height: 55px;
     width: 23px;
     font-size: 0.95rem;

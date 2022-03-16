@@ -30,10 +30,11 @@
 .row_working {
   box-shadow: 0 0 10px 1px #333333b9;
   background-color: #333333a4;
+  animation-play-state: paused;
 }
 .row_working.row_anim {
   animation: row_wrong 0.4s;
-  animation-play-state: running;
+  animation-play-state: running !important;
 }
 .keyboard {
   padding-top: 10px;

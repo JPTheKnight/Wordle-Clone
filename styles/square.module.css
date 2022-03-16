@@ -9,6 +9,7 @@
   -ms-user-select: none;
   user-select: none;
   display: flex;
+  padding: auto auto;
   justify-content: center;
   margin: 2px;
   transition: all 0.2s ease-out;

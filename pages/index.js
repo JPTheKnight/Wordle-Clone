@@ -15,6 +15,7 @@ export default function Home() {
   const [round, setRound] = useState(0);
   const [enter, setEnter] = useState(false);
   const [state, setState] = useState(0);
+  const [lettersUsed, setLettersUsed] = useState([]);
 
   const arr = [1, 1, 1, 1, 1];
 
@@ -34,6 +35,7 @@ export default function Home() {
         if (round == 6) {
           setState(4);
         }
+        setLettersUsed([...lettersUsed, ...currentWord.split("")]);
         setCurrentWord("");
         setEnter(true);
         console.log("right");
@@ -188,27 +190,160 @@ export default function Home() {
         {state != 3 && state != 4 && (
           <div className={styles.keyboard}>
             <div className={styles.row}>
-              <Key letter={"Q"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"W"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"E"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"R"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"T"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"Y"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"U"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"I"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"O"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"P"} word={currentWord} setWord={setCurrentWord} />
+              <Key
+                letter={"Q"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"W"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"E"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"R"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"T"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"Y"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"U"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"I"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"O"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"P"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
             </div>
             <div className={styles.row}>
-              <Key letter={"A"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"S"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"D"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"F"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"G"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"H"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"J"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"K"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"L"} word={currentWord} setWord={setCurrentWord} />
+              <Key
+                letter={"A"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"S"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"D"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"F"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"G"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"H"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"J"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"K"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"L"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
             </div>
             <div className={styles.row}>
               <Key
@@ -218,13 +353,62 @@ export default function Home() {
                 setWord={setCurrentWord}
                 enter={setEnter}
               />
-              <Key letter={"Z"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"X"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"C"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"V"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"B"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"N"} word={currentWord} setWord={setCurrentWord} />
-              <Key letter={"M"} word={currentWord} setWord={setCurrentWord} />
+              <Key
+                letter={"Z"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"X"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"C"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"V"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"B"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"N"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
+              <Key
+                letter={"M"}
+                word={currentWord}
+                setWord={setCurrentWord}
+                used={lettersUsed}
+                enterPressed={enter}
+                chosenWord={chosenWord}
+              />
               <Key
                 letter={"Del"}
                 big
