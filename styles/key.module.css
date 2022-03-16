@@ -1,0 +1,76 @@
+.key {
+  width: 40px;
+}
+.key,
+.keybig {
+  height: 50px;
+  background-color: gray;
+  color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 2px;
+  transition: all 0.2s ease-out;
+}
+.keybig {
+  width: 60px;
+}
+.key:hover,
+.keybig:hover {
+  background-color: #5f5f5f;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .key {
+    height: 55px;
+    width: 35px;
+    font-size: 1.1rem;
+  }
+  .keybig {
+    height: 55px;
+    width: 45px;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .key {
+    height: 45px;
+    width: 45px;
+    font-size: 1.1rem;
+  }
+  .keybig {
+    height: 45px;
+    width: 55px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 400px) {
+  .key {
+    height: 55px;
+    width: 30px;
+    font-size: 1rem;
+  }
+  .keybig {
+    height: 55px;
+    width: 40px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .key {
+    height: 55px;
+    width: 23px;
+    font-size: 0.95rem;
+  }
+  .keybig {
+    height: 55px;
+    width: 33px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,143 @@
+.square,
+.square_green,
+.square_yellow {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  transition: all 0.2s ease-out;
+}
+.square {
+  background-color: hsla(0, 0%, 44%, 0.1);
+  border: 2px solid #464646;
+  font-size: 2rem;
+}
+.square_anim {
+  animation: square-added 0.3s;
+}
+.square_green:first-child,
+.square_green:nth-child(2) {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid green;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+}
+.square_green:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.square_green:nth-child(3) {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid green;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.square_green:nth-child(4) {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid green;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.square_green:nth-child(5) {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid green;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.square_yellow:first-child,
+.square_yellow:nth-child(2) {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid #ff0;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+}
+.square_yellow:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.square_yellow:nth-child(3) {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid #ff0;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.square_yellow:nth-child(4) {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid #ff0;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.square_yellow:nth-child(5) {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid #ff0;
+  font-size: 2rem;
+  -webkit-animation: flip-horizontal-bottom var(--anim_time);
+  animation: flip-horizontal-bottom var(--anim_time);
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+@media (max-width: 300px) {
+  .square,
+  .square_green,
+  .square_yellow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
+}
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flip-horizontal-bottom {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes square-added {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: scale(10%);
+  }
+  100% {
+    transform: scale(0%);
+  }
+}
